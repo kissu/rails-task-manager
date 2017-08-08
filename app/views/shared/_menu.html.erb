@@ -1,0 +1,9 @@
+<p><%= link_to("Back to the list", tasks_path) %></p>
+
+<%= form_for @task do |t| %>
+  <%= t.text_field :name %>
+  <%= t.text_field :what %>
+  <%= t.text_field :where %>
+  <%= t.text_field :whom %>
+  <%= t.submit 'Creer la task' %>
+<% end %>

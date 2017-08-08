@@ -1,0 +1,11 @@
+<h1>Details</h1>
+
+<p><%= link_to("Back to the list", tasks_path) %></p>
+
+<div class="container">
+  <p>Task name: <%= @task.name %></p>
+  <p>The tasks consists of: <%= @task.what %></p>
+  <p>It's: <%= @task.where %></p>
+  <p>People in charge of it: <%= @task.whom %></p>
+  <%= link_to 'Editer le task', edit_task_path(@task) %>
+</div>

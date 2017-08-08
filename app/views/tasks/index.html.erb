@@ -1,0 +1,13 @@
+<h1>La liste des tasks</h1>
+
+<%= link_to 'Ajouter une task', new_task_path %>
+<br>
+
+<% @tasks.each do |task| %>
+<br>
+  <div>
+    <p><%= task.name %></p>
+    <%= link_to 'Allez voir la fiche', task_path(task) %>
+    <%= link_to 'Supprimer', task_path(task), method: :delete, data: { confirm: "Are you sure?" } %>
+  </div>
+<% end %>
